@@ -2,11 +2,11 @@
 
 Ubuntu Subsytem
 
-mkdir GlobalLogic
-cd GlobalLogic
-mkdir learnHardhat
-cd learnHardhat
-code .
+1. mkdir GlobalLogic
+2. cd GlobalLogic
+3. mkdir learnHardhat
+4. cd learnHardhat
+5. code .
 
 Install WSL: Remote Extension on VS Code
 
