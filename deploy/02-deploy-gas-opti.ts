@@ -3,7 +3,7 @@ import { HardhatRuntimeEnvironment } from "hardhat/types"
 import { developmentChains, WAIT_CONFIRMATIONS } from "../helper-hardhat-config"
 import verify from "../utils/verify"
 
-const deployCounter: DeployFunction = async (
+const deployGasOpti: DeployFunction = async (
     hre: HardhatRuntimeEnvironment
 ) => {
     const { getNamedAccounts, network, ethers, deployments } = hre
@@ -18,7 +18,7 @@ const deployCounter: DeployFunction = async (
         ? 1
         : WAIT_CONFIRMATIONS
 
-    const counter = await deploy("Counter", {
+    const GasOpti = await deploy("GasOpti", {
         from: deployer,
         args: args,
         log: true,
@@ -31,9 +31,9 @@ const deployCounter: DeployFunction = async (
         !developmentChains.includes(network.name) &&
         process.env.ETHERSCAN_API_KEY
     ) {
-        await verify(counter.address, args)
+        await verify(GasOpti.address, args)
     }
 }
 
-export default deployCounter
-deployCounter.tags = ["all", "counter"]
+export default deployGasOpti
+deployGasOpti.tags = ["all", "gasopti"]

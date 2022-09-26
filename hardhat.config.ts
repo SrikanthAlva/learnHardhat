@@ -6,6 +6,7 @@ import "dotenv/config"
 const GOERLI_RPC_URL = process.env.GOERLI_RPC_URL || ""
 const RINKEBY_RPC_URL = process.env.RINKEBY_RPC_URL || ""
 const PRIVATE_KEY = process.env.PRIVATE_KEY || ""
+const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || ""
 
 const config: HardhatUserConfig = {
     solidity: {
@@ -33,6 +34,22 @@ const config: HardhatUserConfig = {
     namedAccounts: {
         deployer: {
             default: 0,
+        },
+    },
+    gasReporter: {
+        enabled: true,
+        currency: "USD",
+        outputFile: "gas-report.txt",
+        noColors: true,
+    },
+    etherscan: {
+        apiKey: {
+            goerli: ETHERSCAN_API_KEY,
+            rinkeby: ETHERSCAN_API_KEY,
+            // polygon: POLYGONSCAN_API_KEY,
+            // mumbai: POLYGONSCAN_API_KEY
+            // avalnache: SNOWTRACE_API_KEY,
+            // fuji: SNOWTRACE_API_KEY
         },
     },
 }
