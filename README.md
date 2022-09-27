@@ -137,3 +137,27 @@ yarn hardhat deploy
 OR
 npx hardhat deploy
 ```
+
+---
+
+Day 3
+
+---
+
+Solidity Coverage
+
+Command to check for code coverage
+
+```
+hh coverage
+OR
+yarn hardhat coverage
+OR
+npx hardhat coverage
+```
+
+Etherscan API
+
+Create Account in Ethersscan
+
+ERC20 Token Creation
