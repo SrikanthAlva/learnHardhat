@@ -8,11 +8,14 @@ code .
 
 Install WSL: Remote Extension on VS Code
 
+--npm commands--
 1. npm install --save-dev hardhat
 2. npx hardhat
 3. npm install --save-dev dotenv prettier prettier-plugin-solidity solhint @nomiclabs/hardhat-ethers@npm:hardhat-deploy-ethers ethers hardhat-deploy hardhat-contract-sizer
-   4.npm install -g hardhat-shorthand
+4. 4.npm install -g hardhat-shorthand
 
+
+--yarn commands--
 4. yarn init -y
 5. yarn add --dev hardhat
 6. yarn hardhat // Choose Typescript Project
